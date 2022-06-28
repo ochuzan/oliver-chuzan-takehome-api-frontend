@@ -33,10 +33,6 @@ function RestaurantNewForm() {
 
     const handleTextChange = (event) => {
       setRestaurant({ ...restaurant, [event.target.id]: event.target.value });
-  };
-
-    const handleCheckboxChange = () => {
-        setRestaurant({ ...restaurant, featured: !restaurant.featured });
     };
 
     const disableButton = () => {

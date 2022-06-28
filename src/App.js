@@ -7,13 +7,13 @@ import RestaurantUpdateForm from './components/restaurants/RestaurantUpdateForm'
 import Reservations from './components/reservations/Reservations'
 import ReservationDetails from './components/reservations/ReservationDetails'
 import ReservationNewForm from './components/reservations/ReservationNewForm'
+import NavBar from './components/NavBar';
 
 function App() {
   return (
     <div className="App">
-      Welcome to OpenRez
-
       <Router>
+        <NavBar />
         <Routes>
           <Route path="/" element={null} />
           {/* Restaurants */}
