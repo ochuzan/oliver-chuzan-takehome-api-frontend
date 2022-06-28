@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -30,17 +31,20 @@ function Restaurant({restaurant}) {
           <Typography variant="body2" color="text.secondary">
             {location}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          {/* <Typography variant="body2" color="text.secondary">
             {openingTime} - {closingTime}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
+          </Typography> */}
+          {/* <Typography variant="body2" color="text.secondary">
             {phoneNumber}
-          </Typography>
+          </Typography> */}
           <Typography variant="body2" color="text.secondary">
             {price}
           </Typography>
         </CardContent>
         <CardActions>
+          <Link to={`/restaurants/${restaurant.id}}`}>
+            <Button size="small">Details</Button>
+          </Link>
           <Button size="small">Make Reservation</Button>
         </CardActions>
       </Card>

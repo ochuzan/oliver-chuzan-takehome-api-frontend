@@ -18,13 +18,13 @@ function App() {
           <Route path="/" element={null} />
           {/* Restaurants */}
           <Route path="/restaurants" element={<Restaurants />} />
-          <Route path="/restaurant/:id" element={<RestaurantDetails />} />
-          <Route path="/restaurant/new" element={<RestaurantNewForm />} />
+          <Route path="/restaurants/:id" element={<RestaurantDetails />} />
+          <Route path="/restaurants/new" element={<RestaurantNewForm />} />
           <Route path="/restaurant/:id/edit" element={<RestaurantUpdateForm />} />
           {/* Reservations */}
           <Route path="/reservations" element={<Reservations />} />
           <Route path="/reservations/:id" element={<ReservationDetails />} />
-          <Route path="/reservation/new" element={<ReservationNewForm />} />
+          <Route path="/reservations/new" element={<ReservationNewForm />} />
         </Routes>
       </Router>
     </div>
