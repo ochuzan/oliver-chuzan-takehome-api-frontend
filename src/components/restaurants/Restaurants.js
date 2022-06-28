@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Restaurant from './Restaurant'
+import './Restaurants.css'
 
 function Restaurants() {
     const [ restaurants, setRestaurants ] = useState([])
@@ -16,7 +17,7 @@ function Restaurants() {
     }, []);
 
     return (
-        <div className='restaurants'>
+        <div className='restaurantsList'>
             {restaurants.map(restaurant => {
                 return (
                     <div>
