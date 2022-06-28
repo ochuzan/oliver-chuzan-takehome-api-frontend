@@ -42,23 +42,24 @@ function NavBar() {
             <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1,  }}>
               {/* <img id="navbar-logo" src={logo} alt="OpenRez logo"/> */}
             </Box>
-            <Typography
-              variant="h6"
-              noWrap
-              component="a"
-              href="/"
-              sx={{
-                mr: 2,
-                display: { xs: 'none', md: 'flex' },
-                fontFamily: 'Poppins',
-                fontWeight: 700,
-                letterSpacing: '.3rem',
-                color: 'inherit',
-                textDecoration: 'none',
-              }}
-            >
-              OpenRez
-            </Typography>
+            <Link to="/restaurants">
+                <Typography
+                variant="h6"
+                noWrap
+                component="a"
+                sx={{
+                    mr: 2,
+                    display: { xs: 'none', md: 'flex' },
+                    fontFamily: 'Poppins',
+                    fontWeight: 700,
+                    letterSpacing: '.3rem',
+                    color: 'inherit',
+                    textDecoration: 'none',
+                }}
+                >
+                OpenRez
+                </Typography>
+            </Link>
   
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
               <IconButton
@@ -99,9 +100,9 @@ function NavBar() {
                     <Typography sx={{fontFamily: 'Poppins',fontWeight: 700}} textAlign="center">Reservations</Typography>
                   </MenuItem>
                 </Link>
-                <Link to="/news">
+                <Link to="/restaurants/new">
                   <MenuItem onClick={handleCloseNavMenu}>
-                    <Typography sx={{fontFamily: 'Poppins',fontWeight: 700}} textAlign="center">News</Typography>
+                    <Typography sx={{fontFamily: 'Poppins',fontWeight: 700}} textAlign="center">Add Restaurant</Typography>
                   </MenuItem>
                 </Link>
               </Menu>
@@ -113,7 +114,7 @@ function NavBar() {
               variant="h5"
               noWrap
               component="a"
-              href="/"
+              href="/restaurants"
               sx={{
                 mr: 2,
                 display: { xs: 'flex', md: 'none' },
@@ -144,22 +145,22 @@ function NavBar() {
                   Reservations
                 </Button>
               </Link>
-              <Link to="/videos">
+              <Link to="/restaurants/new">
                 <Button
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: 'white', display: 'block', textDecoration: "none", fontFamily: 'Poppins',fontWeight: 700 }}
                 >
-                  Videos
+                  Add Restaurant
                 </Button>
               </Link>
-              <Link to="/news">
+              {/* <Link to="/news">
                 <Button
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: 'white', display: 'block', textDecoration: "none", fontFamily: 'Poppins',fontWeight: 700 }}
                 >
                   News
                 </Button>
-              </Link>
+              </Link> */}
             </Box>
   
             <Box sx={{ flexGrow: 0 }}>

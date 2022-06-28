@@ -6,12 +6,13 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import './Restaurant.css'
 
 function Restaurant({restaurant}) {
     const { name, description, cuisine, location, openingTime, closingTime, phoneNumber, price } = restaurant;
 
     return (
-      <Card sx={{ maxWidth: 345, backgroundColor: 'blanchedalmond' }}>
+      <Card sx={{ maxWidth: 345, backgroundColor: 'smokeWhite' }}>
         {/* <CardMedia
           component="img"
           alt={name}
@@ -43,9 +44,9 @@ function Restaurant({restaurant}) {
         </CardContent>
         <CardActions>
           <Link to={`/restaurants/${restaurant.id}}`}>
-            <Button size="small">Details</Button>
+            <Button  size="small">Details</Button>
           </Link>
-          <Button size="small">Make Reservation</Button>
+          {/* <Button size="small">Make Reservation</Button> */}
         </CardActions>
       </Card>
     );
