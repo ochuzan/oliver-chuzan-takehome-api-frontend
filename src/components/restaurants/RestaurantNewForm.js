@@ -15,8 +15,7 @@ function RestaurantNewForm() {
       closingTime: "", // time of day
       price: "",
       cuisine: "",
-      location: "",
-      diningRestriction: ""
+      location: ""
     });
 
     const url = process.env.REACT_APP_API_URL;
