@@ -20,8 +20,8 @@ function Restaurants() {
         <div className='restaurantsList'>
             {restaurants.map(restaurant => {
                 return (
-                    <div>
-                        <Restaurant key={restaurant.id} restaurant={restaurant} />
+                    <div key={restaurant.id}>
+                        <Restaurant restaurant={restaurant} />
                     </div>
                 )
             })}
@@ -29,4 +29,4 @@ function Restaurants() {
     )
 }
 
-export default Restaurants
+export default Restaurants;

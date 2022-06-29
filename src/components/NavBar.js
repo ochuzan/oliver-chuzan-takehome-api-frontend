@@ -42,24 +42,23 @@ function NavBar() {
             <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1,  }}>
               {/* <img id="navbar-logo" src={logo} alt="OpenRez logo"/> */}
             </Box>
-            <Link to="/restaurants">
                 <Typography
                 variant="h6"
                 noWrap
-                component="a"
                 sx={{
-                    mr: 2,
-                    display: { xs: 'none', md: 'flex' },
-                    fontFamily: 'Poppins',
-                    fontWeight: 700,
-                    letterSpacing: '.3rem',
-                    color: 'inherit',
-                    textDecoration: 'none',
+                  mr: 2,
+                  display: { xs: 'none', md: 'flex' },
+                  fontFamily: 'Poppins',
+                  fontWeight: 700,
+                  letterSpacing: '.3rem',
+                  color: 'inherit',
+                  textDecoration: 'none',
                 }}
                 >
+                <Link to="/restaurants">
                 OpenRez
+                </Link>
                 </Typography>
-            </Link>
   
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
               <IconButton

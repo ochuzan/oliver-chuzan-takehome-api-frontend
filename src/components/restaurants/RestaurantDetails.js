@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 // import { useNavigate, useParams } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
+import Reservations from '../reservations/Reservations';
 
 function RestaurantDetails() {
     const [ restaurant, setRestaurant ] = useState({});
@@ -53,6 +54,9 @@ function RestaurantDetails() {
           </div>
           <div className='restaurant__price'>
             {price}
+          </div>
+          <div className='restaurant'>
+           {/* <Reservations restaurantId={id}/> */}
           </div>
       </div>
     )
