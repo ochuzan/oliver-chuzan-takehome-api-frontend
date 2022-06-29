@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
 import Reservation from './Reservation'
+import './Reservations.css'
 
 function Reservations({restaurantId}) {
   // console.log(restaurantId)
@@ -24,7 +24,7 @@ function Reservations({restaurantId}) {
       <div className='reservationsList'>
         {reservations.map(reservation => {
           return (
-              <div key={reservations.id}>
+              <div key={reservation.id}>
                   <Reservation reservation={reservation} />
               </div>
           )
