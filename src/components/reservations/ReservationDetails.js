@@ -29,7 +29,7 @@ function ReservationDetails() {
           })
     };
 
-    const {createdAt, firstName, lastName, email, numGuests, phoneNumber, time, restaurantId,} = reservation;
+    const {createdAt, firstName, lastName, email, numGuests, phoneNumber, time, restaurantId} = reservation;
 
     return (
       <div className='reservation'>
