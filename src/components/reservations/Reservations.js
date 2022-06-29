@@ -3,8 +3,7 @@ import { useState, useEffect } from "react";
 import Reservation from './Reservation'
 import './Reservations.css'
 
-function Reservations({restaurantId}) {
-  // console.log(restaurantId)
+function Reservations() {
     const [reservations, setReservations] = useState([]);
 
     const url = process.env.REACT_APP_API_URL;
@@ -17,7 +16,7 @@ function Reservations({restaurantId}) {
         }).catch((error) => {
           console.log(error);
         })
-    }, [url, restaurantId]);
+    }, [url]);
 
 
     return (

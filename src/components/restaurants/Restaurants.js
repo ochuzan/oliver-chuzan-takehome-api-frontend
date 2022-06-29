@@ -4,7 +4,7 @@ import Restaurant from './Restaurant'
 import './Restaurants.css'
 
 function Restaurants() {
-    const [ restaurants, setRestaurants ] = useState([])
+    const [ restaurants, setRestaurants ] = useState([]);
 
     const url = process.env.REACT_APP_API_URL;
 
@@ -14,7 +14,7 @@ function Restaurants() {
                 console.log(res.data.restaurants);
                 setRestaurants(res.data.restaurants);
             })
-    }, []);
+    }, [url]);
 
     return (
         <div className='restaurantsList'>

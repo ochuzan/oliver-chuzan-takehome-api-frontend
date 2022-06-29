@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 import './Restaurant.css'
 
 function Restaurant({restaurant}) {
-    const { name, description, cuisine, location, openingTime, closingTime, phoneNumber, price } = restaurant;
+    const { name, description, cuisine, location, openingTime, closingTime, phoneNumber, price, id } = restaurant;
 
     return (
       <Card sx={{ maxWidth: 345, backgroundColor: 'smokeWhite' }}>
@@ -43,7 +43,7 @@ function Restaurant({restaurant}) {
           </Typography>
         </CardContent>
         <CardActions>
-          <Link to={`/restaurants/${restaurant.id}}`}>
+          <Link to={`/restaurants/${id}}`}>
             <Button  size="small">Details</Button>
           </Link>
           {/* <Button size="small">Make Reservation</Button> */}

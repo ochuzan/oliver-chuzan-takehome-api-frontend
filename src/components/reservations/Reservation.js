@@ -9,7 +9,6 @@ import Typography from '@mui/material/Typography';
 function Reservation({reservation}) {
     const {firstName, lastName, time, restaurantId, id} = reservation;
 
-
     return (
       <Card sx={{ maxWidth: 345, backgroundColor: 'smokeWhite' }}>
         {/* <CardMedia
@@ -39,4 +38,4 @@ function Reservation({reservation}) {
     )
 }
 
-export default Reservation
+export default Reservation;
