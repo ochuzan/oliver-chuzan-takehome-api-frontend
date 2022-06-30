@@ -21,6 +21,8 @@ function RestaurantUpdateForm() {
 
     const url = process.env.REACT_APP_API_URL;
     let { id } = useParams();
+    // id = id.slice(0, -1)
+    // console.log(id)
     let navigate = useNavigate();
 
     useEffect(() => {
