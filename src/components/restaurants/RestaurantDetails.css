@@ -1,0 +1,7 @@
+.restaurant {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* width: 400px; */
+    margin: 20px auto;
+    justify-items: center;
+}

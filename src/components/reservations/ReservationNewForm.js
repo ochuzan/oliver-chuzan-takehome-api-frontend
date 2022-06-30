@@ -57,18 +57,15 @@ function ReservationNewForm({restaurantName}) {
         addReservation(reservation);
     };
 
-    const paperStyle = {padding: "30px 20px", width: 400, margin: "20px auto"};
-    const headerStyle = {margin: "0", color: "#FE462D"};
-
     const numberOfGuests = [2, 3, 4, 5, 6, 7, 8, 9, 10]; 
     return (
       // <Grid>
-        <Paper elevation={20} style={paperStyle}>
+        <Paper elevation={20} sx={{padding: "30px 20px", width: 400}}>
             <Grid align="center" sx={{marginBottom:"10px"}}>
               <Avatar sx={{backgroundColor: "#FE462D"}}>
                 <PersonAddAltOutlinedIcon/>
               </Avatar>
-                <h2 style={headerStyle}>Make A Reservation</h2>
+              <Typography sx={{fontWeight: "600", color: "#FE462D"}}variant='h5'>Make a Reservation</Typography>
               <Typography variant="caption" >Please fill this form to make a reservation at {restaurantName}</Typography>
               <div>
                 <Typography variant="caption">Required fields are marked with an asterisk: *</Typography>

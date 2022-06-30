@@ -1,8 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams, Link } from 'react-router-dom';
-// import { useParams } from 'react-router-dom';
-import { Avatar, Button, Divider, Checkbox, FormControl, FormControlLabel, InputLabel, OutlinedInput, InputAdornment, IconButton, Grid, Paper, TextField, Typography, Stack, MenuItem, Select } from "@mui/material";
+import { Avatar, Button, Divider, Grid, Paper, Typography, Stack } from "@mui/material";
 import PersonAddAltOutlinedIcon from '@mui/icons-material/PersonAddAltOutlined';
 
 function ReservationDetails() {
@@ -41,7 +40,7 @@ function ReservationDetails() {
           </Avatar>
           <Typography sx={{fontWeight: "600", color: "#FE462D"}}variant='h5'>Reservation Details</Typography>
         </Grid>
-        <Grid align="">
+        <Grid >
           <Typography>{firstName} {lastName}</Typography>
           <Typography className='reservation__email'>
             {email}
@@ -60,25 +59,25 @@ function ReservationDetails() {
           </Typography>
         </Grid>
         <Stack
-                        className="button-nav"
-                        direction="row"
-                        divider={<Divider orientation="vertical" flexItem />}
-                        justifyContent="center"
-                        alignItems="center" spacing={2}
-                        sx={{marginTop: "10px"}}
-                    >
-                        <Link to={`/reservations`}>
-                            <Button variant="contained" color="primary">Back</Button>
-                        </Link>
-                        <Link to={`/reservations/${id}/edit`}>
-                            <Button variant="contained" color="success">
-                                Edit
-                            </Button>
-                        </Link>
-                        <Button onClick={handleDelete} variant="contained" color="error">
-                            Delete
-                        </Button>
-                    </Stack>
+          className="button-nav"
+          direction="row"
+          divider={<Divider orientation="vertical" flexItem />}
+          justifyContent="center"
+          alignItems="center" spacing={2}
+          sx={{marginTop: "10px"}}
+      >
+          <Link to={`/reservations`}>
+              <Button variant="contained" color="primary">Back</Button>
+          </Link>
+          <Link to={`/reservations/${id}/edit`}>
+              <Button variant="contained" color="success">
+                  Edit
+              </Button>
+          </Link>
+          <Button onClick={handleDelete} variant="contained" color="error">
+              Delete
+          </Button>
+      </Stack>
       </Paper>
     )
 }
