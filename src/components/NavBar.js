@@ -40,7 +40,7 @@ function NavBar() {
         <Container maxWidth="xl" >
           <Toolbar sx={{ marginTop: "10px" }} disableGutters>
             <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1,  }}>
-              {/* <img id="navbar-logo" src={logo} alt="OpenRez logo"/> */}
+              {/* <img id="navbar-logo" src={logo} alt="Reserva logo"/> */}
             </Box>
                 <Typography
                 variant="h6"
@@ -56,7 +56,7 @@ function NavBar() {
                 }}
                 >
                 <Link to="/restaurants">
-                OpenRez
+                Reserva
                 </Link>
                 </Typography>
   
@@ -107,7 +107,7 @@ function NavBar() {
               </Menu>
             </Box>
             <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1,  }}>
-              {/* <img id="navbar-logo" src={logo} alt="OpenRez logo"/> */}
+              {/* <img id="navbar-logo" src={logo} alt="Reserva logo"/> */}
             </Box>
             <Typography
               variant="h5"
@@ -125,7 +125,7 @@ function NavBar() {
                 textDecoration: 'none',
               }}
             >
-              OpenRez
+              Reserva
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               <Link to="/restaurants">
