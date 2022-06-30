@@ -76,7 +76,7 @@ function ReservationUpdateForm() {
     const numberOfGuests = [2, 3, 4, 5, 6, 7, 8, 9, 10]; 
     return (
       // <Grid>
-        <Paper elevation={20} sx={{padding: "30px 20px", width: 400}}>
+        <Paper elevation={20} sx={{padding: "30px 20px", width: 400, margin: "20px auto"}}>
           <Grid align="center" sx={{marginBottom:"10px"}}>
             <Avatar sx={{backgroundColor: "#FE462D"}}>
               <PersonAddAltOutlinedIcon/>
@@ -90,7 +90,7 @@ function ReservationUpdateForm() {
           <form onSubmit={handleSubmit}>
             <TextField required onChange={handleTextChange} margin="dense" fullWidth value={reservation.firstName} id='firstName' label='First Name' placeholder="Enter your first name"/>
             <TextField required onChange={handleTextChange} margin="dense" fullWidth value={reservation.lastName} id='lastName' label='Last Name' placeholder="Enter your last name"/>
-            <TextField onChange={handleTextChange} margin="dense" fullWidth value={reservation.email} id='email' label='Email' placeholder="Enter your email address"/>
+            <TextField onChange={handleTextChange} margin="dense" fullWidth value={reservation.email || ""} id='email' label='Email' placeholder="Enter your email address"/>
             <TextField required onChange={handleTextChange} margin="dense" fullWidth value={reservation.phoneNumber} id='phoneNumber' label='Phone Number' placeholder="Enter your phone number"/>
             <TextField required onChange={handleGuests} margin="dense" fullWidth id='numGuests' label='Number of Guests' placeholder="Enter number of guests" select value={reservation.numGuests}>
               <MenuItem id='numGuests' value={1}>1 Guest</MenuItem>
