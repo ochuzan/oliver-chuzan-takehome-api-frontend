@@ -21,7 +21,6 @@ function RestaurantUpdateForm() {
 
     const url = process.env.REACT_APP_API_URL;
     let { id } = useParams();
-    id = id.slice(0, -1)
     let navigate = useNavigate();
 
     useEffect(() => {
@@ -34,7 +33,7 @@ function RestaurantUpdateForm() {
     }, [url, id]);
 
     const updateRestaurant = (updatedRestaurant) => {
-      axios.patch(`${url}/api/restaurants/${id}`)
+      axios.patch(`${url}/api/restaurants/${id}`, updatedRestaurant)
         .then((res) => {
           navigate(`/restaurants/${id}`);
         }).catch((error) => {
@@ -58,6 +57,7 @@ function RestaurantUpdateForm() {
 
     const handleSubmit = (event) => {
       event.preventDefault();
+      console.log(restaurant)
       updateRestaurant(restaurant);
     };
 

@@ -5,7 +5,7 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 // import TextField from "@mui/material/TextField";
 // import Button from '@mui/material/Button';
-import { Avatar, Button, Checkbox, FormControl, FormControlLabel, InputLabel, OutlinedInput, InputAdornment, IconButton, Grid, Paper, TextField, Typography, Stack, MenuItem, Select } from "@mui/material";
+import { Avatar, Button, Grid, Paper, TextField, Typography, MenuItem, Select } from "@mui/material";
 import PersonAddAltOutlinedIcon from '@mui/icons-material/PersonAddAltOutlined';
 
 function ReservationNewForm({restaurantName}) {
@@ -50,7 +50,7 @@ function ReservationNewForm({restaurantName}) {
       } else {
           return true;
       }
-    }
+    };
 
     const handleSubmit = (event) => {
         event.preventDefault();

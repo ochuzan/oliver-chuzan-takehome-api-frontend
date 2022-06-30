@@ -26,7 +26,7 @@ function App() {
             <Route path="/restaurants" element={<Restaurants />} />
             <Route path="/restaurants/:id" element={<RestaurantDetails />} />
             <Route path="/restaurants/new" element={<RestaurantNewForm />} />
-            <Route path="/restaurant/:id/edit" element={<RestaurantUpdateForm />} />
+            <Route path="/restaurants/:id/edit" element={<RestaurantUpdateForm />} />
             {/* Reservations */}
             <Route path="/reservations" element={<Reservations />} />
             <Route path="/reservations/:id" element={<ReservationDetails />} />

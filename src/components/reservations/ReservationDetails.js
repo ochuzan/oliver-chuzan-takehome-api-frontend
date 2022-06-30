@@ -9,7 +9,9 @@ function ReservationDetails() {
 
     const url = process.env.REACT_APP_API_URL;
     let { id } = useParams();
-    id = id.slice(0, -1)
+    if (id.length-1 === "}") {
+      id = id.slice(0, -1)
+    }
     let navigate = useNavigate();
 
     useEffect(() => {
