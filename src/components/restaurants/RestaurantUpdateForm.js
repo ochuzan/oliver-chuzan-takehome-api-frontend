@@ -82,7 +82,7 @@ function RestaurantUpdateForm() {
       </Grid>
       <form onSubmit={handleSubmit}>
         <TextField required onChange={handleTextChange} margin="dense" fullWidth value={name} id='name' label='Resaurant Name' placeholder="Enter your restaurant name"/>
-        <TextField required onChange={handleTextChange} margin="dense" fullWidth value={description} id='description' label='Description' placeholder="Enter restaurant description"/>
+        <TextField required onChange={handleTextChange} margin="dense" fullWidth value={description} id='description' label='Description' placeholder="Enter restaurant description" multiline maxRows={5}/>
         <TextField required onChange={handleTextChange} margin="dense" fullWidth value={cuisine} id='cuisine' label='Cuisine' placeholder="Enter restaurant cuisine"/>
         <TextField required onChange={handleTextChange} margin="dense" fullWidth value={location} id='location' label='Location' placeholder="Enter restaurant location"/>
         <TextField required onChange={handleTextChange} margin="dense" fullWidth value={openingTime} id='openingTime' label='Opening Time' placeholder="Enter restaurant opening time"/>
