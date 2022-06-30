@@ -1,10 +1,7 @@
-# Getting Started with Create React App
+# Oliver Chuzan's USV Takehome Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
+## Netlify Deployed Link
+https://re-serva.netlify.app/restaurants
 
 ### `npm start`
 

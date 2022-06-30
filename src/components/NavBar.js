@@ -48,7 +48,7 @@ function NavBar() {
                 sx={{
                   mr: 2,
                   display: { xs: 'none', md: 'flex' },
-                  fontFamily: 'Poppins',
+                  fontFamily: 'Cormorant Garamond',
                   fontWeight: 700,
                   letterSpacing: '.3rem',
                   color: 'inherit',
@@ -91,17 +91,17 @@ function NavBar() {
               >
                 <Link to="/restaurants">
                   <MenuItem onClick={handleCloseNavMenu}>
-                    <Typography sx={{fontFamily: 'Poppins',fontWeight: 700}}textAlign="center">Restaurants</Typography>
+                    <Typography sx={{fontFamily: 'Cormorant Garamond',fontWeight: 700}}textAlign="center">Restaurants</Typography>
                   </MenuItem>
                 </Link>
                 <Link to="/reservations">
                   <MenuItem onClick={handleCloseNavMenu}>
-                    <Typography sx={{fontFamily: 'Poppins',fontWeight: 700}} textAlign="center">Reservations</Typography>
+                    <Typography sx={{fontFamily: 'Cormorant Garamond',fontWeight: 700}} textAlign="center">Reservations</Typography>
                   </MenuItem>
                 </Link>
                 <Link to="/restaurants/new">
                   <MenuItem onClick={handleCloseNavMenu}>
-                    <Typography sx={{fontFamily: 'Poppins',fontWeight: 700}} textAlign="center">Add Restaurant</Typography>
+                    <Typography sx={{fontFamily: 'Cormorant Garamond',fontWeight: 700}} textAlign="center">Add Restaurant</Typography>
                   </MenuItem>
                 </Link>
               </Menu>
@@ -118,8 +118,8 @@ function NavBar() {
                 mr: 2,
                 display: { xs: 'flex', md: 'none' },
                 flexGrow: 1,
-                fontFamily: 'Poppins',
-                fontWeight: 700,
+                fontFamily: 'Cormorant Garamond',
+                fontWeight: 900,
                 letterSpacing: '.3rem',
                 color: 'inherit',
                 textDecoration: 'none',
@@ -131,7 +131,7 @@ function NavBar() {
               <Link to="/restaurants">
                 <Button
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: 'white', display: 'block', textDecoration: "none", fontFamily: 'Poppins',fontWeight: 700}}
+                  sx={{ my: 2, color: 'white', display: 'block', textDecoration: "none", fontFamily: 'Cormorant Garamond',fontWeight: 700}}
                 >
                   Restaurants
                 </Button>
@@ -139,7 +139,7 @@ function NavBar() {
               <Link to="/reservations">
                 <Button
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: 'white', display: 'block', textDecoration: "none", fontFamily: 'Poppins',fontWeight: 700 }}
+                  sx={{ my: 2, color: 'white', display: 'block', textDecoration: "none", fontFamily: 'Cormorant Garamond',fontWeight: 700 }}
                 >
                   Reservations
                 </Button>
@@ -147,7 +147,7 @@ function NavBar() {
               <Link to="/restaurants/new">
                 <Button
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: 'white', display: 'block', textDecoration: "none", fontFamily: 'Poppins',fontWeight: 700 }}
+                  sx={{ my: 2, color: 'white', display: 'block', textDecoration: "none", fontFamily: 'Cormorant Garamond',fontWeight: 700 }}
                 >
                   Add Restaurant
                 </Button>
@@ -155,7 +155,7 @@ function NavBar() {
               {/* <Link to="/news">
                 <Button
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: 'white', display: 'block', textDecoration: "none", fontFamily: 'Poppins',fontWeight: 700 }}
+                  sx={{ my: 2, color: 'white', display: 'block', textDecoration: "none", fontFamily: 'Cormorant Garamond',fontWeight: 700 }}
                 >
                   News
                 </Button>
@@ -184,22 +184,22 @@ function NavBar() {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
               >
-                <Link to="/users">
+                <Link to="">
                   <MenuItem  onClick={handleCloseUserMenu}>
                       <Typography textAlign="center">Profile</Typography>
                   </MenuItem>
                 </Link>
-                <Link to="/users/login">
+                <Link to="">
                   <MenuItem  onClick={handleCloseUserMenu}>
                       <Typography textAlign="center">Login</Typography>
                   </MenuItem>
                 </Link>
-                <Link to="/users/new">
+                <Link to="">
                   <MenuItem  onClick={handleCloseUserMenu}>
                       <Typography textAlign="center">Sign Up</Typography>
                   </MenuItem>
                 </Link>
-                <Link to="/users/:id/edit">
+                <Link to="">
                   <MenuItem  onClick={handleCloseUserMenu}>
                       <Typography textAlign="center">Edit Profile</Typography>
                   </MenuItem>
