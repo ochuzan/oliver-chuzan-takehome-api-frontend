@@ -7,6 +7,7 @@ import RestaurantUpdateForm from './components/restaurants/RestaurantUpdateForm'
 import Reservations from './components/reservations/Reservations'
 import ReservationDetails from './components/reservations/ReservationDetails'
 import ReservationNewForm from './components/reservations/ReservationNewForm'
+import ReservationUpdateForm from './components/reservations/ReservationUpdateForm'
 import NavBar from './components/NavBar';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
@@ -30,6 +31,7 @@ function App() {
             <Route path="/reservations" element={<Reservations />} />
             <Route path="/reservations/:id" element={<ReservationDetails />} />
             <Route path="/reservations/new" element={<ReservationNewForm />} />
+            <Route path="/reservations/:id/edit" element={<ReservationUpdateForm />} />
           </Routes>
         </Router>
       </div>
