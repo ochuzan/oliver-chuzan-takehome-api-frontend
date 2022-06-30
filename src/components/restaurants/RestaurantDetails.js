@@ -70,7 +70,7 @@ function RestaurantDetails() {
               divider={<Divider orientation="vertical" flexItem />}
               justifyContent="center"
               alignItems="center" spacing={2}
-              sx={{marginTop: "10px"}}
+              sx={{marginTop: "280px"}}
           >
               <Link to={`/reservations`}>
                   <Button variant="contained" color="primary">Back</Button>
