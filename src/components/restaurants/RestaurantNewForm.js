@@ -1,10 +1,9 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import * as React from "react";
-import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
-import Button from '@mui/material/Button';
+import { Avatar, Button, Grid, Paper, TextField, Typography, MenuItem, Select } from "@mui/material";
+import PersonAddAltOutlinedIcon from '@mui/icons-material/PersonAddAltOutlined';
+
 
 function RestaurantNewForm() {
     const [ restaurant, setRestaurant ] = useState({
@@ -34,6 +33,10 @@ function RestaurantNewForm() {
       setRestaurant({ ...restaurant, [event.target.id]: event.target.value });
     };
 
+    const handlePriceSelect = (event) => {
+        setRestaurant({ ...restaurant, price: event.target.value });
+    };
+
     const disableButton = () => {
       const { name, description, openingTime, closingTime, price, cuisine, location } = restaurant;
 
@@ -49,120 +52,35 @@ function RestaurantNewForm() {
         addRestaurant(restaurant);
     };
 
+    const priceSelect = ["$", "$$", "$$$", "$$$$"];
     return (
-      <div className="restaurant-new-form">
-            <div>
-                <h2>Add a New Restaurant</h2>
-            </div>
-            <Box
-                className="box"
-                component="form"
-                sx={{
-                    '& .MuiTextField-root': { m: 1, width: '25ch' },
-                    // bgcolor: 'rgba(240,248,255, .9)',
-                    border: 1,
-                    height: 350,
-                    borderRadius: 5,
-                    boxShadow: 5
-                }}
-                noValidate
-                autoComplete="off"
-                onSubmit={handleSubmit}
-            >
+        <Paper elevation={20} sx={{padding: "30px 20px", width: 400, margin: "20px auto"}}>
+            <Grid align="center" sx={{marginBottom:"10px"}}>
+                <Avatar sx={{backgroundColor: "#FE462D"}}>
+                    <PersonAddAltOutlinedIcon/>
+                </Avatar>
+                    <Typography sx={{fontWeight: "600", color: "#FE462D"}} variant='h5'>Add a New Restaurant</Typography>
+                    <Typography variant="caption" >Please fill this form to add a restaurant</Typography>
                 <div>
-                    <TextField
-                        required
-                        id="name"
-                        label="Restaurant Name"
-                        onChange={handleTextChange}
-                        variant="filled"
-                        color="primary"
-                        focused
-                    />
-                    <TextField
-                        required
-                        id="description"
-                        label="Description"
-                        onChange={handleTextChange}
-                        variant="filled"
-                        color="primary"
-                        focused
-                    />
+                    <Typography variant="caption">Required fields are marked with an asterisk: *</Typography>
                 </div>
-                <div>
-                    <TextField
-                        id="phoneNumber"
-                        label="Phone Number"
-                        onChange={handleTextChange}
-                        variant="filled"
-                        color="primary"
-                        focused
-                    />
-                    <TextField
-                        required
-                        // inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
-                        id="openingTime"
-                        label="Opening Time"
-                        onChange={handleTextChange}
-                        variant="filled"
-                        color="primary"
-                        focused
-                    />
-                    <TextField
-                        required
-                        // inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
-                        id="closingTime"
-                        label="Closing Time"
-                        onChange={handleTextChange}
-                        variant="filled"
-                        color="primary"
-                        focused
-                    />
-                </div>
-                <div>
-                    <TextField
-                        required
-                        inputProps={{ inputMode: 'string', pattern: '[$$$$]*' }}
-                        id="price"
-                        label="Price"
-                        helperText="Rating of $-$$$$ only"
-                        onChange={handleTextChange}
-                        variant="filled"
-                        color="primary"
-                        focused
-                    />
-                    <TextField
-                        required
-                        id="cuisine"
-                        label="Cuisine"
-                        onChange={handleTextChange}
-                        variant="filled"
-                        color="primary"
-                        focused
-                    />
-                    <TextField
-                    required
-                        id="location"
-                        label="Location"
-                        onChange={handleTextChange}
-                        variant="filled"
-                        color="primary"
-                        focused
-                    />
-                    {/* <TextField
-                        id="diningRestriction"
-                        label="diningRestriction"
-                        onChange={handleTextChange}
-                        variant="filled"
-                        color="primary"
-                        focused
-                    /> */}
-                </div>
-                <div>
-                    <Button variant="contained" type="submit" disabled={disableButton()}>Submit</Button>
-                </div>
-            </Box>
-        </div>
+            </Grid>
+            <form onSubmit={handleSubmit}>
+                <TextField required onChange={handleTextChange} margin="dense" fullWidth id='name' label='Resaurant Name' placeholder="Enter your restaurant name"/>
+                <TextField required onChange={handleTextChange} margin="dense" fullWidth id='description' label='Description' placeholder="Enter restaurant description" multiline maxRows={5}/>
+                <TextField required onChange={handleTextChange} margin="dense" fullWidth id='cuisine' label='Cuisine' placeholder="Enter restaurant cuisine"/>
+                <TextField required onChange={handleTextChange} margin="dense" fullWidth id='location' label='Location' placeholder="Enter restaurant location"/>
+                <TextField required onChange={handleTextChange} margin="dense" fullWidth id='openingTime' label='Opening Time' placeholder="Enter restaurant opening time"/>
+                <TextField required onChange={handleTextChange} margin="dense" fullWidth id='closingTime' label='Closing Time' placeholder="Enter restaurant closing time"/>
+                <TextField onChange={handleTextChange} margin="dense" fullWidth id='phoneNumber' label='Phone Number' placeholder="Enter your phone number"/>
+                <TextField required onChange={handlePriceSelect} margin="dense" fullWidth id='price' label='Price' placeholder="Enter price" select defaultValue="$">
+                    {priceSelect.map((price) => {
+                        return <MenuItem key={price} id='price' value={price}>{price}</MenuItem>
+                    })}
+                </TextField>
+                <Button type="submit" variant="contained" size="large" color="primary" fullWidth disabled={disableButton()}>Add Resaurant</Button>
+            </form>
+        </Paper>
     )
 }
 

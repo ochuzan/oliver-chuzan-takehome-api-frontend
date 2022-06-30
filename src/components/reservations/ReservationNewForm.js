@@ -11,7 +11,7 @@ import PersonAddAltOutlinedIcon from '@mui/icons-material/PersonAddAltOutlined';
 function ReservationNewForm({restaurantName}) {
     let { id } = useParams();
     id = id.slice(0, -1);
-
+    
     const [ reservation, setReservation ] = useState({
       firstName: "",
       lastName: "",

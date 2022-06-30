@@ -59,9 +59,17 @@ function RestaurantUpdateForm() {
       }
     };
 
+    const checkRestaurantBeforePatching = (restaurant) => {
+      for (let field in restaurant) {
+        if (restaurant[field] === "" || field === "id" || field === "reservations") {
+          delete restaurant[field];
+        }
+      }
+    };
+
     const handleSubmit = (event) => {
       event.preventDefault();
-      console.log(restaurant)
+      checkRestaurantBeforePatching(restaurant);
       updateRestaurant(restaurant);
     };
 
@@ -100,4 +108,4 @@ function RestaurantUpdateForm() {
     )
 }
 
-export default RestaurantUpdateForm
+export default RestaurantUpdateForm;

@@ -17,7 +17,6 @@ function ReservationUpdateForm() {
 
     const url = process.env.REACT_APP_API_URL;
     let { id } = useParams();
-    // console.log(id)
     let navigate = useNavigate();
 
     useEffect(() => {
@@ -81,7 +80,7 @@ function ReservationUpdateForm() {
             <Avatar sx={{backgroundColor: "#FE462D"}}>
               <PersonAddAltOutlinedIcon/>
             </Avatar>
-            <Typography sx={{fontWeight: "600", color: "#FE462D"}}variant='h5'>Edit Reservation</Typography>
+            <Typography sx={{fontWeight: "600", color: "#FE462D"}} variant='h5'>Edit Reservation</Typography>
             <Typography variant="caption" >Please fill this form to edit your reservation</Typography>
             <div>
               <Typography variant="caption">Required fields are marked with an asterisk: *</Typography>
