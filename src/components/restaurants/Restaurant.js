@@ -12,7 +12,7 @@ function Restaurant({restaurant}) {
     const { name, description, cuisine, location, openingTime, closingTime, phoneNumber, price, id } = restaurant;
 
     return (
-      <Card sx={{ maxWidth: 345, backgroundColor: 'smokeWhite' }}>
+      <Card sx={{ maxWidth: 345, backgroundColor: 'smokeWhite', border: "1px solid grey", marginRight: "0" }}>
         {/* <CardMedia
           component="img"
           alt={name}

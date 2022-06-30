@@ -10,7 +10,7 @@ function Reservation({reservation}) {
     const {firstName, lastName, time, restaurantId, id} = reservation;
 
     return (
-      <Card sx={{ maxWidth: 345, backgroundColor: 'smokeWhite' }}>
+      <Card sx={{ maxWidth: 345, backgroundColor: 'smokeWhite', border: "1px solid grey" }}>
         {/* <CardMedia
           component="img"
           alt={name}
