@@ -42,6 +42,7 @@ function NavBar() {
             <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1,  }}>
               {/* <img id="navbar-logo" src={logo} alt="Reserva logo"/> */}
             </Box>
+              <Link to="/restaurants">
                 <Typography
                 variant="h6"
                 noWrap
@@ -55,10 +56,9 @@ function NavBar() {
                   textDecoration: 'none',
                 }}
                 >
-                <Link to="/restaurants">
                 Reserva
-                </Link>
                 </Typography>
+              </Link>
   
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
               <IconButton
