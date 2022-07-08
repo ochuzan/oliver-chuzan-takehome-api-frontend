@@ -5,9 +5,26 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 function Reservation({reservation}) {
+    const [ restaurant, setRestaurant ] = useState({});
+
     const {firstName, lastName, time, restaurantId, id} = reservation;
+    const {name} = restaurant;
+
+    const url = process.env.REACT_APP_API_URL;
+
+    useEffect(() => {
+      axios.get(`${url}/api/restaurants/${restaurantId}`)
+        .then(res => {
+          setRestaurant(res.data)
+          console.log(res.data);
+        }).catch(error => {
+          console.log(error);
+        })
+    }, [])
 
     return (
       <Card sx={{ maxWidth: 345, backgroundColor: 'smokeWhite', border: "1px solid grey" }}>
@@ -22,7 +39,7 @@ function Reservation({reservation}) {
             {firstName} {lastName}
           </Typography>
           <Typography variant="body1" color="text.secondary">
-            {restaurantId}
+            {name}
           </Typography>
           <Typography variant="body2" color="text.secondary">
             Reservation Time: {time}
