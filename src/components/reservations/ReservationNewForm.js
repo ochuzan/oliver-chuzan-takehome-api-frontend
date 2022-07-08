@@ -52,17 +52,8 @@ function ReservationNewForm({restaurantName}) {
       }
     };
 
-    // const checkReservationBeforeAdding = (reservation) => {
-    //   for (let field in reservation) {
-    //     if (reservation[field] === "email") {
-    //       delete reservation[field];
-    //     }
-    //   }
-    // };
-
     const handleSubmit = (event) => {
         event.preventDefault();
-        // checkReservationBeforeAdding(reservation);
         addReservation(reservation);
     };
 
