@@ -12,7 +12,6 @@ function Reservations() {
       axios.get(`${url}/api/reservations/`)
         .then((res) => {
           setReservations(res.data.reservations);
-          console.log(res.data.reservations)
         }).catch((error) => {
           console.log(error);
         })

@@ -20,7 +20,6 @@ function Reservation({reservation}) {
       axios.get(`${url}/api/restaurants/${restaurantId}`)
         .then(res => {
           setRestaurant(res.data)
-          console.log(res.data);
         }).catch(error => {
           console.log(error);
         })
@@ -46,7 +45,7 @@ function Reservation({reservation}) {
           </Typography>
         </CardContent>
         <CardActions>
-          <Link to={`/reservations/${id}}`}>
+          <Link to={`/reservations/${id}}`} state={{restaurant: restaurant}}>
             <Button  size="small">Reservation Details</Button>
           </Link>
           {/* <Button size="small">Make Reservation</Button> */}

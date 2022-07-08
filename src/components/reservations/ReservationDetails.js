@@ -1,11 +1,12 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react'
-import { useNavigate, useParams, Link } from 'react-router-dom';
+import { useNavigate, useParams, Link, useLocation } from 'react-router-dom';
 import { Avatar, Button, Divider, Grid, Paper, Typography, Stack } from "@mui/material";
 import PersonAddAltOutlinedIcon from '@mui/icons-material/PersonAddAltOutlined';
 
 function ReservationDetails() {
     const [ reservation, setReservation ] = useState({});
+    const [ restaurant, setRestaurant ] = useState({})
 
     const url = process.env.REACT_APP_API_URL;
     let { id } = useParams();
@@ -13,7 +14,7 @@ function ReservationDetails() {
       id = id.slice(0, -1);
     };
 
-    let navigate = useNavigate();
+    const location = useLocation();
 
     useEffect(() => {
       axios.get(`${url}/api/reservations/${id}`)
@@ -21,8 +22,21 @@ function ReservationDetails() {
           setReservation(res.data);
         }).catch((error) => {
           console.log(error);
+        });
+
+      if (location.state?.restaurant) {
+        setRestaurant(location.state?.restaurant);
+      } else {
+        axios.get(`${url}/api/restaurants/${reservation.restaurantId}`)
+        .then(res => {
+          setRestaurant(res.data)
+        }).catch(error => {
+          console.log(error);
         })
-    }, [url, id]);
+      }
+    }, [url, id, reservation.restaurantId]);
+
+    const navigate = useNavigate();
 
     const handleDelete = () => {
       axios.delete(`${url}/api/reservations/${id}`)
@@ -52,7 +66,7 @@ function ReservationDetails() {
             Phone Number: {phoneNumber}
           </Typography>
           <Typography className='reservation__restaurant'>
-            Restaurant: {restaurantId}
+            Restaurant: {restaurant.name}
           </Typography>
           <Typography className='reservation__numGuests'>
             Number of Guests: {numGuests}
