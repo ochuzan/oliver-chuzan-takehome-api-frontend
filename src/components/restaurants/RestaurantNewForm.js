@@ -10,8 +10,8 @@ function RestaurantNewForm() {
       name: "",
       description: "",
       phoneNumber: "",
-      openingTime: "", // time of day
-      closingTime: "", // time of day
+      openingTime: "",
+      closingTime: "",
       price: "",
       cuisine: "",
       location: ""

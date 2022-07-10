@@ -48,7 +48,6 @@ function Reservation({reservation}) {
           <Link to={`/reservations/${id}}`} state={{restaurant: restaurant}}>
             <Button  size="small">Reservation Details</Button>
           </Link>
-          {/* <Button size="small">Make Reservation</Button> */}
         </CardActions>
       </Card>
     )

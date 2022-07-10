@@ -11,7 +11,6 @@ function Restaurants() {
     useEffect(() => {
         axios.get(`${url}/api/restaurants`)
             .then((res) => {
-                console.log(res.data.restaurants);
                 setRestaurants(res.data.restaurants);
             })
     }, [url]);

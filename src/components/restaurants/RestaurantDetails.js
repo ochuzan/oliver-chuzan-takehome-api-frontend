@@ -90,32 +90,6 @@ function RestaurantDetails() {
         </Paper>
         <ReservationNewForm restaurantName={name}/>
       </div>
-      //   <div className='restaurant'>
-      //     <div className='restaurant__name'>
-      //       {name}
-      //     </div>
-      //     <div className='restaurant__description'>
-      //       {description}
-      //     </div>
-      //     <div className='restaurant__cuisine'>
-      //       {cuisine}
-      //     </div>
-      //     <div className='restaurant__location'>
-      //       {location}
-      //     </div>
-      //     <div className='restaurant__openingTime'>
-      //       {openingTime} - {closingTime}
-      //     </div>
-      //     <div className='restaurant__phoneNumber'>
-      //       {phoneNumber}
-      //     </div>
-      //     <div className='restaurant__price'>
-      //       {price}
-      //     </div>
-      //     <div className='reservation_form'>
-          //  <ReservationNewForm restaurantName={name}/>
-      //     </div>
-      // </div>
     )
 }
 

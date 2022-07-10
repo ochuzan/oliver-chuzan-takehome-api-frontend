@@ -94,7 +94,7 @@ function ReservationDetails() {
           <Button onClick={handleDelete} variant="contained" color="error">
               Delete
           </Button>
-      </Stack>
+        </Stack>
       </Paper>
     )
 }

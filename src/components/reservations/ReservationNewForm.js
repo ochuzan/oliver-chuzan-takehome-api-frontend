@@ -53,54 +53,51 @@ function ReservationNewForm({restaurantName}) {
     };
 
     const handleSubmit = (event) => {
-      console.log(reservation)
         event.preventDefault();
         addReservation(reservation);
     };
 
     const numberOfGuests = [2, 3, 4, 5, 6, 7, 8, 9, 10]; 
     return (
-      // <Grid>
-        <Paper elevation={20} sx={{padding: "30px 20px", width: 400}}>
-            <Grid align="center" sx={{marginBottom:"10px"}}>
-              <Avatar sx={{backgroundColor: "#FE462D"}}>
-                <PersonAddAltOutlinedIcon/>
-              </Avatar>
-              <Typography sx={{fontWeight: "600", color: "#FE462D"}}variant='h5'>Make a Reservation</Typography>
-              <Typography variant="caption" >Please fill this form to make a reservation at {restaurantName}</Typography>
-              <div>
-                <Typography variant="caption">Required fields are marked with an asterisk: *</Typography>
-              </div>
-            </Grid>
-            <form onSubmit={handleSubmit}>
-              <TextField required onChange={handleTextChange} margin="dense" fullWidth id='firstName' label='First Name' placeholder="Enter your first name"/>
-              <TextField required onChange={handleTextChange} margin="dense" fullWidth id='lastName' label='Last Name' placeholder="Enter your last name"/>
-              <TextField onChange={handleTextChange} margin="dense" fullWidth id='email' label='Email' placeholder="Enter your email address"/>
-              <TextField required onChange={handleTextChange} margin="dense" fullWidth id='phoneNumber' label='Phone Number' placeholder="Enter your phone number"/>
-              <TextField required onChange={handleGuests} margin="dense" fullWidth id='numGuests' label='Number of Guests' placeholder="Enter number of guests" select value={reservation.numGuests}>
-                <MenuItem id='numGuests' value={1}>1 Guest</MenuItem>
-                {numberOfGuests.map((number) => {
-                   return <MenuItem key={number} id='numGuests' value={number}>{number} Guests</MenuItem>
-                })}
-              </TextField>
-              <TextField
-                required
-                onChange={handleTextChange}
-                margin="dense"
-                fullWidth
-                id="time"
-                label="Reservation Time"
-                type="datetime-local"
-                defaultValue="2022-06-01T12:00"
-                // sx={{ width: 250 }}
-                InputLabelProps={{
-                  shrink: true,
-                }}
-              />
-              <Button type="submit" variant="contained" size="large" color="primary" fullWidth disabled={disableButton()}>Reserve Now</Button>
-            </form>
-        </Paper>
-      // </Grid>
+      <Paper elevation={20} sx={{padding: "30px 20px", width: 400}}>
+          <Grid align="center" sx={{marginBottom:"10px"}}>
+            <Avatar sx={{backgroundColor: "#FE462D"}}>
+              <PersonAddAltOutlinedIcon/>
+            </Avatar>
+            <Typography sx={{fontWeight: "600", color: "#FE462D"}}variant='h5'>Make a Reservation</Typography>
+            <Typography variant="caption" >Please fill this form to make a reservation at {restaurantName}</Typography>
+            <div>
+              <Typography variant="caption">Required fields are marked with an asterisk: *</Typography>
+            </div>
+          </Grid>
+          <form onSubmit={handleSubmit}>
+            <TextField required onChange={handleTextChange} margin="dense" fullWidth id='firstName' label='First Name' placeholder="Enter your first name"/>
+            <TextField required onChange={handleTextChange} margin="dense" fullWidth id='lastName' label='Last Name' placeholder="Enter your last name"/>
+            <TextField onChange={handleTextChange} margin="dense" fullWidth id='email' label='Email' placeholder="Enter your email address"/>
+            <TextField required onChange={handleTextChange} margin="dense" fullWidth id='phoneNumber' label='Phone Number' placeholder="Enter your phone number"/>
+            <TextField required onChange={handleGuests} margin="dense" fullWidth id='numGuests' label='Number of Guests' placeholder="Enter number of guests" select value={reservation.numGuests}>
+              <MenuItem id='numGuests' value={1}>1 Guest</MenuItem>
+              {numberOfGuests.map((number) => {
+                  return <MenuItem key={number} id='numGuests' value={number}>{number} Guests</MenuItem>
+              })}
+            </TextField>
+            <TextField
+              required
+              onChange={handleTextChange}
+              margin="dense"
+              fullWidth
+              id="time"
+              label="Reservation Time"
+              type="datetime-local"
+              // defaultValue="2022-07-11T12:00"
+              // sx={{ width: 250 }}
+              InputLabelProps={{
+                shrink: true,
+              }}
+            />
+            <Button type="submit" variant="contained" size="large" color="primary" fullWidth disabled={disableButton()}>Reserve Now</Button>
+          </form>
+      </Paper>
     )
 }
 
