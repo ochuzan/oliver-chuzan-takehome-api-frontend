@@ -2,11 +2,8 @@ import axios from "axios";
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import * as React from "react";
-import Box from "@mui/material/Box";
-// import TextField from "@mui/material/TextField";
-// import Button from '@mui/material/Button';
 import { Avatar, Button, Grid, Paper, TextField, Typography, MenuItem, Select } from "@mui/material";
-import PersonAddAltOutlinedIcon from '@mui/icons-material/PersonAddAltOutlined';
+import TableRestaurantIcon from '@mui/icons-material/TableRestaurant';
 
 function ReservationNewForm({restaurantName}) {
     let { id } = useParams();
@@ -62,7 +59,7 @@ function ReservationNewForm({restaurantName}) {
       <Paper elevation={20} sx={{padding: "30px 20px", width: 400}}>
           <Grid align="center" sx={{marginBottom:"10px"}}>
             <Avatar sx={{backgroundColor: "#FE462D"}}>
-              <PersonAddAltOutlinedIcon/>
+              <TableRestaurantIcon/>
             </Avatar>
             <Typography sx={{fontWeight: "600", color: "#FE462D"}}variant='h5'>Make a Reservation</Typography>
             <Typography variant="caption" >Please fill this form to make a reservation at {restaurantName}</Typography>

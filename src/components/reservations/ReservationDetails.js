@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams, Link, useLocation } from 'react-router-dom';
 import { Avatar, Button, Divider, Grid, Paper, Typography, Stack } from "@mui/material";
-import PersonAddAltOutlinedIcon from '@mui/icons-material/PersonAddAltOutlined';
+import EventNoteIcon from '@mui/icons-material/EventNote';
 
 function ReservationDetails() {
     const [ reservation, setReservation ] = useState({});
@@ -53,7 +53,7 @@ function ReservationDetails() {
       <Paper elevation={20} sx={{padding: "30px 20px", width: 400, margin: "20px auto"}}>
         <Grid align="center" sx={{marginBottom:"10px"}}>
           <Avatar sx={{backgroundColor: "#FE462D"}}>
-            <PersonAddAltOutlinedIcon/>
+            <EventNoteIcon/>
           </Avatar>
           <Typography sx={{fontWeight: "600", color: "#FE462D"}}variant='h5'>Reservation Details</Typography>
         </Grid>

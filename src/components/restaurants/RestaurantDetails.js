@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { useNavigate, useParams, Link } from 'react-router-dom';
 import ReservationNewForm from '../reservations/ReservationNewForm';
 import { Avatar, Button, Divider, Grid, Paper, Typography, Stack } from "@mui/material";
-import PersonAddAltOutlinedIcon from '@mui/icons-material/PersonAddAltOutlined';
+import RestaurantIcon from '@mui/icons-material/Restaurant';
 import './RestaurantDetails.css'
 
 function RestaurantDetails() {
@@ -42,7 +42,7 @@ function RestaurantDetails() {
         <Paper elevation={20} sx={{padding: "30px 20px", width: 400}}>
             <Grid align="center" sx={{marginBottom:"10px"}}>
               <Avatar sx={{backgroundColor: "#FE462D"}}>
-                <PersonAddAltOutlinedIcon/>
+                <RestaurantIcon/>
               </Avatar>
               <Typography sx={{fontWeight: "600", color: "#FE462D"}} variant='h5'>Restaurant Details</Typography>
             </Grid>

@@ -2,8 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Avatar, Button, Grid, Paper, TextField, Typography, MenuItem, Select } from "@mui/material";
-import PersonAddAltOutlinedIcon from '@mui/icons-material/PersonAddAltOutlined';
-
+import RestaurantIcon from '@mui/icons-material/Restaurant';
 
 function RestaurantNewForm() {
     const [ restaurant, setRestaurant ] = useState({
@@ -57,7 +56,7 @@ function RestaurantNewForm() {
         <Paper elevation={20} sx={{padding: "30px 20px", width: 400, margin: "20px auto"}}>
             <Grid align="center" sx={{marginBottom:"10px"}}>
                 <Avatar sx={{backgroundColor: "#FE462D"}}>
-                    <PersonAddAltOutlinedIcon/>
+                    <RestaurantIcon/>
                 </Avatar>
                     <Typography sx={{fontWeight: "600", color: "#FE462D"}} variant='h5'>Add a New Restaurant</Typography>
                     <Typography variant="caption" >Please fill this form to add a restaurant</Typography>

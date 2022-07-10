@@ -21,7 +21,6 @@ function App() {
         <Router>
           <NavBar />
           <Routes>
-            {/* <Route path="/" element={null} /> */}
             {/* Restaurants */}
             <Route path="/" element={<Restaurants />} />
             <Route path="/restaurants/:id" element={<RestaurantDetails />} />

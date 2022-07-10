@@ -10,7 +10,6 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import { useState } from 'react';
 import { Link } from "react-router-dom";
 import TableRestaurantIcon from '@mui/icons-material/TableRestaurant';
@@ -35,8 +34,8 @@ function NavBar() {
     };
   
     return (
-      <AppBar position="sticky" sx={{ backgroundColor: "#FE462D", height: "80px", marginBottom: "20px" }}>
-        <Container maxWidth="xl" >
+      <AppBar position="sticky" sx={{ backgroundColor: "#FE462D", height: "80px", width: "100%", margin: "0 auto 20px" }}>
+        <Container >
           <Toolbar sx={{ marginTop: "10px" }} disableGutters>
             <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1,  }}>
               <TableRestaurantIcon fontSize="large"/>
@@ -103,7 +102,7 @@ function NavBar() {
               <TableRestaurantIcon fontSize="large"/>
             </Box>
             <Typography
-              variant="h5"
+              variant="h4"
               noWrap
               component={Link}
               to="/"

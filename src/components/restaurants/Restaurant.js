@@ -12,15 +12,15 @@ function Restaurant({restaurant}) {
     const { name, cuisine, location, price, id } = restaurant;
 
     return (
-      <Card sx={{ maxWidth: 345, backgroundColor: 'smokeWhite', border: "1px solid grey", marginRight: "0" }}>
+      <Card sx={{ maxWidth: "auto", maxHeight: "fit-content", backgroundColor: 'smokeWhite', border: "1px solid grey", marginRight: "0", justifyItems: "center" }}>
         {/* <CardMedia
           component="img"
           alt={name}
           height="140"
           image=""
         /> */}
-        <CardContent>
-          <Typography gutterBottom variant="h8" component="div">
+        <CardContent sx={{padding: "8px"}}>
+          <Typography gutterBottom variant="h8" >
             {name}
           </Typography>
           <Typography variant="body2" color="text.secondary">

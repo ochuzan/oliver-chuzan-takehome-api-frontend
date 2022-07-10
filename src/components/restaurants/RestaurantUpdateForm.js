@@ -2,8 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Avatar, Button, Grid, Paper, TextField, Typography, MenuItem, Select } from "@mui/material";
-import PersonAddAltOutlinedIcon from '@mui/icons-material/PersonAddAltOutlined';
-
+import EditIcon from '@mui/icons-material/Edit';
 
 function RestaurantUpdateForm() {
     const [ restaurant, setRestaurant ] = useState({
@@ -80,7 +79,7 @@ function RestaurantUpdateForm() {
       <Paper elevation={20} sx={{padding: "30px 20px", width: 400, margin: "20px auto"}}>
       <Grid align="center" sx={{marginBottom:"10px"}}>
         <Avatar sx={{backgroundColor: "#FE462D"}}>
-          <PersonAddAltOutlinedIcon/>
+          <EditIcon/>
         </Avatar>
         <Typography sx={{fontWeight: "600", color: "#FE462D"}} variant='h5'>Edit Restaurant</Typography>
         <Typography variant="caption">Please use this form to edit your restaurant</Typography>
