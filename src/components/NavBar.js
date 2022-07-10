@@ -42,10 +42,12 @@ function NavBar() {
             <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1,  }}>
               {/* <img id="navbar-logo" src={logo} alt="Reserva logo"/> */}
             </Box>
-              <Link to="/restaurants">
+              {/* <Link to="/restaurants"> */}
                 <Typography
                 variant="h6"
                 noWrap
+                component="a"
+                href="/restaurants"
                 sx={{
                   mr: 2,
                   display: { xs: 'none', md: 'flex' },
@@ -58,7 +60,7 @@ function NavBar() {
                 >
                 Reserva
                 </Typography>
-              </Link>
+              {/* </Link> */}
   
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
               <IconButton
@@ -91,17 +93,17 @@ function NavBar() {
               >
                 <Link to="/restaurants">
                   <MenuItem onClick={handleCloseNavMenu}>
-                    <Typography sx={{fontFamily: 'Cormorant Garamond',fontWeight: 700}}textAlign="center">Restaurants</Typography>
+                    <Typography sx={{fontFamily: 'Cormorant Garamond',fontWeight: 700, letterSpacing: '2px'}} textAlign="center">Restaurants</Typography>
                   </MenuItem>
                 </Link>
                 <Link to="/reservations">
                   <MenuItem onClick={handleCloseNavMenu}>
-                    <Typography sx={{fontFamily: 'Cormorant Garamond',fontWeight: 700}} textAlign="center">Reservations</Typography>
+                    <Typography sx={{fontFamily: 'Cormorant Garamond',fontWeight: 700, letterSpacing: '2px'}} textAlign="center">Reservations</Typography>
                   </MenuItem>
                 </Link>
                 <Link to="/restaurants/new">
                   <MenuItem onClick={handleCloseNavMenu}>
-                    <Typography sx={{fontFamily: 'Cormorant Garamond',fontWeight: 700}} textAlign="center">Add Restaurant</Typography>
+                    <Typography sx={{fontFamily: 'Cormorant Garamond',fontWeight: 700, letterSpacing: '2px'}} textAlign="center">Add Restaurant</Typography>
                   </MenuItem>
                 </Link>
               </Menu>
@@ -131,7 +133,7 @@ function NavBar() {
               <Link to="/restaurants">
                 <Button
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: 'white', display: 'block', textDecoration: "none", fontFamily: 'Cormorant Garamond',fontWeight: 700}}
+                  sx={{ my: 2, color: 'white', display: 'block', textDecoration: "none", fontFamily: 'Cormorant Garamond', fontWeight: 700, letterSpacing: '2px'}}
                 >
                   Restaurants
                 </Button>
@@ -139,7 +141,7 @@ function NavBar() {
               <Link to="/reservations">
                 <Button
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: 'white', display: 'block', textDecoration: "none", fontFamily: 'Cormorant Garamond',fontWeight: 700 }}
+                  sx={{ my: 2, color: 'white', display: 'block', textDecoration: "none", fontFamily: 'Cormorant Garamond', fontWeight: 700 , letterSpacing: '2px'}}
                 >
                   Reservations
                 </Button>
@@ -147,7 +149,7 @@ function NavBar() {
               <Link to="/restaurants/new">
                 <Button
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: 'white', display: 'block', textDecoration: "none", fontFamily: 'Cormorant Garamond',fontWeight: 700 }}
+                  sx={{ my: 2, color: 'white', display: 'block', textDecoration: "none", fontFamily: 'Cormorant Garamond', fontWeight: 700 , letterSpacing: '2px'}}
                 >
                   Add Restaurant
                 </Button>
