@@ -53,6 +53,7 @@ function ReservationNewForm({restaurantName}) {
     };
 
     const handleSubmit = (event) => {
+      console.log(reservation)
         event.preventDefault();
         addReservation(reservation);
     };
