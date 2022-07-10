@@ -21,9 +21,9 @@ function App() {
         <Router>
           <NavBar />
           <Routes>
-            <Route path="/" element={null} />
+            {/* <Route path="/" element={null} /> */}
             {/* Restaurants */}
-            <Route path="/restaurants" element={<Restaurants />} />
+            <Route path="/" element={<Restaurants />} />
             <Route path="/restaurants/:id" element={<RestaurantDetails />} />
             <Route path="/restaurants/new" element={<RestaurantNewForm />} />
             <Route path="/restaurants/:id/edit" element={<RestaurantUpdateForm />} />

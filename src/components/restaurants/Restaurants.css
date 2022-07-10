@@ -8,3 +8,11 @@
     font-weight: 800;
     font-size: large;
 }
+
+.noResults {
+    font-weight: 700;
+    width: 200px;
+    margin: 0 auto;
+    display: block ;
+    /* padding: 200px 0; */
+}
