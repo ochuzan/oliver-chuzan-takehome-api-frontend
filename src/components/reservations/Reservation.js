@@ -26,13 +26,13 @@ function Reservation({reservation}) {
     }, [])
 
     return (
-      <Card sx={{ maxWidth: 345, backgroundColor: 'smokeWhite', border: "1px solid grey" }}>
-        {/* <CardMedia
+      <Card sx={{ maxWidth: 345, backgroundColor: 'MistyRose', border: "1px solid grey" }}>
+        <CardMedia
           component="img"
           alt={name}
           height="140"
-          image=""
-        /> */}
+          image="https://images.unsplash.com/photo-1576707769315-01a7474de445?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+        />
         <CardContent>
           <Typography gutterBottom variant="h8" component="div">
             {firstName} {lastName}
@@ -44,7 +44,7 @@ function Reservation({reservation}) {
             Reservation Time: {time}
           </Typography>
         </CardContent>
-        <CardActions>
+        <CardActions sx={{padding: "0px 10px"}}>
           <Link to={`/reservations/${id}}`} state={{restaurant: restaurant}}>
             <Button  size="small">Reservation Details</Button>
           </Link>

@@ -12,7 +12,7 @@ function Searchbar({searchInput, setSearchInput}) {
     return (
       <Paper
       variant='outlined'
-      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400, margin: "0 auto 10px" }}
+      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400, margin: "0 auto 10px", border: "2px solid black" }}
       >
         <SearchIcon />
         <InputBase

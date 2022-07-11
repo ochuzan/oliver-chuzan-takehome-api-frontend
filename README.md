@@ -1,7 +1,7 @@
 # Oliver Chuzan's USV Takehome Assignment
 
 ## Netlify Deployed Link
-https://re-serva.netlify.app/restaurants
+https://re-serva.netlify.app/
 
 ### `npm start`
 

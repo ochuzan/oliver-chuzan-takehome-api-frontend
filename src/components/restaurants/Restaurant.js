@@ -12,25 +12,19 @@ function Restaurant({restaurant}) {
     const { name, cuisine, location, price, id } = restaurant;
 
     return (
-      <Card sx={{ maxWidth: "auto", maxHeight: "fit-content", backgroundColor: 'smokeWhite', border: "1px solid grey", marginRight: "0", justifyItems: "center" }}>
-        {/* <CardMedia
+      <Card sx={{ maxWidth: "auto", maxHeight: "fit-content", backgroundColor: 'MistyRose', border: "1px solid grey", marginRight: "0", justifyItems: "center" }}>
+        <CardMedia
           component="img"
           alt={name}
           height="140"
-          image=""
-        /> */}
+          image="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+        />
         <CardContent sx={{padding: "8px"}}>
           <Typography gutterBottom variant="h8" >
             {name}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Cuisine: {cuisine}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {location}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {price}
+            {cuisine} - {location} - {price}
           </Typography>
         </CardContent>
         <CardActions>
