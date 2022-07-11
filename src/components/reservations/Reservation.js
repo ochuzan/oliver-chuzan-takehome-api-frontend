@@ -23,7 +23,7 @@ function Reservation({reservation}) {
         }).catch(error => {
           console.log(error);
         })
-    }, [])
+    }, [url, restaurantId])
 
     return (
       <Card sx={{ maxWidth: 345, backgroundColor: 'MistyRose', border: "1px solid grey" }}>

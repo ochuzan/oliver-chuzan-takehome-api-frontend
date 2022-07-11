@@ -34,7 +34,7 @@ function ReservationDetails() {
           console.log(error);
         })
       }
-    }, [url, id, reservation.restaurantId]);
+    }, [url, id, location.state?.restaurant, reservation.restaurantId]);
 
     const navigate = useNavigate();
 
@@ -47,7 +47,7 @@ function ReservationDetails() {
           })
     };
 
-    const {createdAt, firstName, lastName, email, numGuests, phoneNumber, time, restaurantId} = reservation;
+    const {firstName, lastName, email, numGuests, phoneNumber, time} = reservation;
 
     return (
       <Paper elevation={20} sx={{padding: "30px 20px", width: 400, margin: "20px auto"}}>

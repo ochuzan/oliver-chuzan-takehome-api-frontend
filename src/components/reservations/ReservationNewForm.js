@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import * as React from "react";
-import { Avatar, Button, Grid, Paper, TextField, Typography, MenuItem, Select } from "@mui/material";
+import { Avatar, Button, Grid, Paper, TextField, Typography, MenuItem } from "@mui/material";
 import TableRestaurantIcon from '@mui/icons-material/TableRestaurant';
 
 function ReservationNewForm({restaurantName}) {

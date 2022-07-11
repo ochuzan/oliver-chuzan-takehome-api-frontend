@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { Avatar, Button, Grid, Paper, TextField, Typography, MenuItem, Select } from "@mui/material";
+import { Avatar, Button, Grid, Paper, TextField, Typography, MenuItem } from "@mui/material";
 import EditIcon from '@mui/icons-material/Edit';
 
 function ReservationUpdateForm() {
