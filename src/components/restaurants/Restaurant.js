@@ -11,8 +11,15 @@ import './Restaurant.css'
 function Restaurant({restaurant}) {
     const { name, cuisine, location, price, isPopular, id } = restaurant;
 
+    let highlight;
+    if (isPopular) {
+      highlight = "7px solid red";
+    } else {
+      highlight =  "1px solid grey";
+    }
+
     return (
-      <Card sx={{ maxWidth: "auto", maxHeight: "fit-content", backgroundColor: 'MistyRose', border: "1px solid grey", marginRight: "0", justifyItems: "center" }}>
+      <Card sx={{ maxWidth: "auto", maxHeight: "fit-content", backgroundColor: 'MistyRose', border: highlight, marginRight: "0", justifyItems: "center" }}>
         <CardMedia
           component="img"
           alt={name}
