@@ -75,7 +75,7 @@ function RestaurantDetails() {
               alignItems="center" spacing={2}
               sx={{marginTop: "280px"}}
           >
-              <Link to={`/restaurants`}>
+              <Link to={'/'}>
                   <Button variant="contained" color="primary">Back</Button>
               </Link>
               <Link to={`/restaurants/${id}/edit`}>

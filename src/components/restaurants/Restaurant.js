@@ -27,7 +27,7 @@ function Restaurant({restaurant}) {
             {cuisine} - {location} - {price}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {isPopular}
+            Popular: {isPopular ? <span>Yes</span>: <span>No</span>}
           </Typography>
         </CardContent>
         <CardActions>
