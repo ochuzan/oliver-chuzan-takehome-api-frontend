@@ -22,7 +22,7 @@ function RestaurantNewForm() {
     const addRestaurant = (newRestaurant) => {
       axios.post(`${url}/api/restaurants`, newRestaurant)
         .then((res) => {
-          navigate("/restaurants");
+          navigate("/");
         }).catch((error) => {
           console.log(error);
         });
