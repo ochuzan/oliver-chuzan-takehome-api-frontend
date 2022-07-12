@@ -10,9 +10,30 @@ function Restaurants() {
 
     const url = process.env.REACT_APP_API_URL;
 
+    // Check each restaurant to see num of reservations
+    // Go to each restarant and get num of reservations
+    const listOfPopularRestaurants = (list) => {
+        const popularRestaurants = list.sort((a, b) => {
+            if (a.reservations.length > b.reservations.length) {
+                return -1;
+            } else {
+                return 1;
+            }
+        })
+        let topThreeRest = popularRestaurants.slice(0, 3);
+        console.log(topThreeRest)
+        return topThreeRest;
+    }
+    // To highlight the restaurants with highest reservation by threshold
+    
+
     useEffect(() => {
         axios.get(`${url}/api/restaurants`)
             .then((res) => {
+                listOfPopularRestaurants(res.data.restaurants).forEach((restaurant) => {
+                    restaurant.isPopular = true;
+                })
+
                 setRestaurants(res.data.restaurants);
             })
     }, [url]);
@@ -24,6 +45,7 @@ function Restaurants() {
             return restaurantNameLowerCase.includes(searchInput.toLowerCase());
         })
     }
+
 
     return (
         <div>
